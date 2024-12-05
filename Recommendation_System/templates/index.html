@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom-Based Recommendation</title>
+</head>
+<body>
+    <h1>Enter Symptoms for Disease Recommendation</h1>
+    <form method="POST">
+        <label for="symptoms">Symptoms (comma separated):</label>
+        <input type="text" id="symptoms" name="symptoms" required>
+        <button type="submit">Get Recommendation</button>
+    </form>
+
+    {% if predicted_disease %}
+        <h2>Recommended Disease: {{ predicted_disease }}</h2>
+    {% endif %}
+</body>
+</html>
